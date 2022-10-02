@@ -1,4 +1,4 @@
-package org.innovatrics.jmrtd;
+package org.polaris.jmrtd;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -10,9 +10,9 @@ import java.util.List;
 
 import org.bouncycastle.asn1.ASN1InputStream;
 import org.bouncycastle.asn1.ASN1Primitive;
-import org.innovatrics.jmrtd.DG4Utils.IrisPosition;
 import org.jmrtd.lds.icao.DG4File;
 import org.jmrtd.lds.iso19794.IrisInfo;
+import org.polaris.jmrtd.DG4Utils.IrisPosition;
 
 public class App3 {
 

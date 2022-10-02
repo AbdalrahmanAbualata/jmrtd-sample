@@ -1,4 +1,4 @@
-package org.innovatrics.jmrtd;
+package org.polaris.jmrtd;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -71,8 +71,8 @@ public class DG2Utils {
         int quality = 0x0000;
         int imageDataType = FaceImageInfo.IMAGE_DATA_TYPE_JPEG2000;	
         FeaturePoint[] featurePoint = {new FeaturePoint(0, 0,0, 0, 0)};
-        int width = 512;
-        int height = 512;
+        int width = 480;
+        int height = 640;
         InputStream imageBytes = new FileInputStream(image);
         int imageLength = imageBytes.available();
         FaceImageInfo fii = new FaceImageInfo(gender,eyeColor,featureMask,hairColor,expression,poseAngle,poseAngleUncertainty,faceImageType,colorSpace,

@@ -1,4 +1,4 @@
-package org.innovatrics.jmrtd;
+package org.polaris.jmrtd;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -10,9 +10,9 @@ import java.util.List;
 
 import org.bouncycastle.asn1.ASN1InputStream;
 import org.bouncycastle.asn1.ASN1Primitive;
-import org.innovatrics.jmrtd.DG3Utils.FingerprintPosition;
 import org.jmrtd.lds.icao.DG3File;
 import org.jmrtd.lds.iso19794.FingerInfo;
+import org.polaris.jmrtd.DG3Utils.FingerprintPosition;
 
 public class App {
 

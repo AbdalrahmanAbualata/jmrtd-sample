@@ -1,4 +1,4 @@
-package org.innovatrics.jmrtd;
+package org.polaris.jmrtd;
 
 import java.io.IOException;
 

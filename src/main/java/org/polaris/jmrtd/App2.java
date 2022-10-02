@@ -1,4 +1,4 @@
-package org.innovatrics.jmrtd;
+package org.polaris.jmrtd;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -44,16 +44,16 @@ public class App2 {
 
     public static void main(String[] args) throws IOException {
 
-       System.out.println(generateASNfromDG2(Files.readAllBytes(new File("face25-9-Our.bin").toPath()))); 
+       System.out.println(generateASNfromDG2(Files.readAllBytes(new File("Face_CBEFF.bin").toPath()))); 
 
-        System.out.println(generateASNfromDG2(generateDG2fromImages(new File(".")).getEncoded()));
+        // System.out.println(generateASNfromDG2(generateDG2fromImages(new File(".")).getEncoded()));
         File outputFile;
         outputFile  = new File("test.txt");
         outputFile.createNewFile();
         FileWriter fileWriter;
         fileWriter = new FileWriter(outputFile, false);
         // String everything = generateASNfromDG2(generateDG2fromImages(new File(".")).getEncoded());
-         String everything = generateASNfromDG2(Files.readAllBytes(new File("face25-9-Our.bin").toPath()));
+         String everything = generateASNfromDG2(Files.readAllBytes(new File("Face_CBEFF.bin").toPath()));
         fileWriter.write(everything);
         fileWriter.close();
        
