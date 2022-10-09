@@ -17,16 +17,16 @@ public class DG3Utils {
 
     public enum FingerprintPosition {
         UNKNOWN((byte) 0x00),
-        RIGHT_THUMB((byte) 0x01),
-        RIGHT_INDEX((byte) 0x02),
-        RIGHT_MIDDLE((byte) 0x03),
-        RIGHT_RING((byte) 0x04),
-        RIGHT_LITTLE((byte) 0x05),
+        RIGHT_THUMB((byte) 0x05),
+        RIGHT_INDEX((byte) 0x09),
+        RIGHT_MIDDLE((byte) 0x0D),
+        RIGHT_RING((byte) 0x11),
+        RIGHT_LITTLE((byte) 0x15),
         LEFT_THUMB((byte) 0x06),
-        LEFT_INDEX((byte) 0x07),
-        LEFT_MIDDLE((byte) 0x08),
-        LEFT_RING((byte) 0x09),
-        LEFT_LITTLE((byte) 0x0A),
+        LEFT_INDEX((byte) 0x0A),
+        LEFT_MIDDLE((byte) 0x0E),
+        LEFT_RING((byte) 0x12),
+        LEFT_LITTLE((byte) 0x16),
         ;
 
         private final byte value;

@@ -16,7 +16,7 @@ import org.jmrtd.lds.icao.DG2File;
 import org.jmrtd.lds.iso19794.FaceInfo;
 
 
-public class App2 {
+public class FaceCBEFF {
 
     public static String generateASNfromDG2(byte[] dg2File) throws IOException {
         ASN1InputStream input = new ASN1InputStream(dg2File);
@@ -34,7 +34,7 @@ public class App2 {
 
         {
             faceInfos.add(
-                    DG2Utils.generateFaceInfo(new File(directory, "faceImage.jpg")));
+                    DG2Utils.generateFaceInfo(new File(directory, "faceImageOmran.jpg")));
             // fingerInfos.add(
             //         DG3Utils.generateFingerInfo(FingerprintPosition.LEFT_LITTLE, new File(directory, "fp2.wsq")));
         }
@@ -44,7 +44,7 @@ public class App2 {
 
     public static void main(String[] args) throws IOException {
 
-       System.out.println(generateASNfromDG2(Files.readAllBytes(new File("Face_CBEFF.bin").toPath()))); 
+    //    System.out.println(generateASNfromDG2(Files.readAllBytes(new File("faceCBEFF.bin").toPath()))); 
 
         // System.out.println(generateASNfromDG2(generateDG2fromImages(new File(".")).getEncoded()));
         File outputFile;
@@ -53,7 +53,7 @@ public class App2 {
         FileWriter fileWriter;
         fileWriter = new FileWriter(outputFile, false);
         // String everything = generateASNfromDG2(generateDG2fromImages(new File(".")).getEncoded());
-         String everything = generateASNfromDG2(Files.readAllBytes(new File("Face_CBEFF.bin").toPath()));
+         String everything = generateASNfromDG2(Files.readAllBytes(new File("Face_CBEFF_modified.bin").toPath()));
         fileWriter.write(everything);
         fileWriter.close();
        

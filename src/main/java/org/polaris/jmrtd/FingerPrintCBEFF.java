@@ -14,7 +14,7 @@ import org.jmrtd.lds.icao.DG3File;
 import org.jmrtd.lds.iso19794.FingerInfo;
 import org.polaris.jmrtd.DG3Utils.FingerprintPosition;
 
-public class App {
+public class FingerPrintCBEFF {
 
     public static String generateASNfromDG3(byte[] dg3File) throws IOException {
         ASN1InputStream input = new ASN1InputStream(dg3File);

@@ -14,7 +14,7 @@ import org.jmrtd.lds.icao.DG4File;
 import org.jmrtd.lds.iso19794.IrisInfo;
 import org.polaris.jmrtd.DG4Utils.IrisPosition;
 
-public class App3 {
+public class IrisCBEFF {
 
     public static String generateASNfromDG4(byte[] dg3File) throws IOException {
         ASN1InputStream input = new ASN1InputStream(dg3File);
