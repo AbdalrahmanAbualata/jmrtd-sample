@@ -69,7 +69,7 @@ public class DG2Utils {
         int sourceType = FaceImageInfo.SOURCE_TYPE_UNSPECIFIED;
         int deviceType = 0x0000;
         int quality = 0x0000;
-        int imageDataType = FaceImageInfo.IMAGE_DATA_TYPE_JPEG2000;	
+        int imageDataType = FaceImageInfo.IMAGE_DATA_TYPE_JPEG;	
         FeaturePoint[] featurePoint = {new FeaturePoint(0, 0,0, 0, 0)};
         int width = 480;
         int height = 640;

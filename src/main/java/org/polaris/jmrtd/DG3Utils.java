@@ -41,9 +41,37 @@ public class DG3Utils {
 
     }
 
+
+    // use in position when generat fingerPrintImageInfo
+    public enum FingerprintPositionInIso {
+        UNKNOWN((byte) 0x00),
+        RIGHT_THUMB((byte) 0x01),
+        RIGHT_INDEX((byte) 0x02),
+        RIGHT_MIDDLE((byte) 0x03),
+        RIGHT_RING((byte) 0x04),
+        RIGHT_LITTLE((byte) 0x05),
+        LEFT_THUMB((byte) 0x06),
+        LEFT_INDEX((byte) 0x07),
+        LEFT_MIDDLE((byte) 0x08),
+        LEFT_RING((byte) 0x09),
+        LEFT_LITTLE((byte) 0x0A),
+        ;
+
+        private final byte value;
+
+        FingerprintPositionInIso(byte value) {
+            this.value = value;
+        }
+
+        public byte getValue() {
+            return value;
+        }
+
+    }
+
     
   
-    public static FingerInfo generateFingerInfo(FingerprintPosition fpos, File image) throws IOException {
+    public static FingerInfo generateFingerInfo(FingerprintPosition fpos,FingerprintPositionInIso fpiso, File image) throws IOException {
         Map<Integer, byte[]> elements = new HashMap<Integer, byte[]>();
         // ICAO Haader
         {
@@ -89,10 +117,10 @@ public class DG3Utils {
         int compressionAlgorithm = 2;
 
         List<FingerImageInfo> fingerImageInfos = new ArrayList<FingerImageInfo>();
-        int position = fpos.getValue();
+        int position = fpiso.getValue();
         int viewCount = 1;
         int viewNumber = 1;
-        int quality = 50;
+        int quality = 90;
         int impressionType = 0;
         int width = 512;
         int height = 512;

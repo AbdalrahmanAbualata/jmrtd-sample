@@ -13,6 +13,7 @@ import org.bouncycastle.asn1.ASN1Primitive;
 import org.jmrtd.lds.icao.DG3File;
 import org.jmrtd.lds.iso19794.FingerInfo;
 import org.polaris.jmrtd.DG3Utils.FingerprintPosition;
+import org.polaris.jmrtd.DG3Utils.FingerprintPositionInIso;
 
 public class FingerPrintCBEFF {
 
@@ -32,9 +33,9 @@ public class FingerPrintCBEFF {
 
         {
             fingerInfos.add(
-                    DG3Utils.generateFingerInfo(FingerprintPosition.LEFT_RING, new File(directory, "fp1.wsq")));
+                    DG3Utils.generateFingerInfo(FingerprintPosition.LEFT_RING,FingerprintPositionInIso.LEFT_RING, new File(directory, "fp1.wsq")));
             fingerInfos.add(
-                    DG3Utils.generateFingerInfo(FingerprintPosition.LEFT_LITTLE, new File(directory, "fp2.wsq")));
+                    DG3Utils.generateFingerInfo(FingerprintPosition.LEFT_LITTLE,FingerprintPositionInIso.LEFT_LITTLE, new File(directory, "fp2.wsq")));
         }
         return new DG3File(fingerInfos, true);
 
